@@ -1,0 +1,33 @@
+version: '3'
+services:
+    django:
+        restart: always
+        build: ./django
+        expose:
+            - "8000"
+        networks:
+            - nginx_network
+        volumes:
+            - ./django/project:/code
+        links:
+            - redis
+    nginx:
+        restart: always
+        image:
+            - nginx
+        ports:
+            - "80:80"
+        networks:
+            - nginx_network
+        depends_on:
+            - django
+        volumes:
+            - ./nginx/project.conf:/etc/nginx/conf.d/project.conf
+    redis:
+        restart: always
+        image:
+            - redis:2.8
+networks:
+    nginx_network:
+        driver: bridge
+            
