@@ -70,9 +70,19 @@ $ docker-compose up
 - ファイアウォールの設定で80番ポートへのアクセスを許可しておきましょう。
 (Edit the firewall to allow access to port 80.)
 
+## repletion
 
+Djangoのプロジェクトを編集した場合は、次のコマンドで反映可能です。
 
+(If you edit a Django project, you can reflect it with the following command:)
 
+```
+$ docker restart CONTAINERNAME
+```
+
+CONTAINERNAMEには、Djangoコンテナのコンテナ名を入れてください。
+
+(In CONTAINERNAME, write container name of "Django Container".)
 
 
 
