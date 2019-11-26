@@ -1,1 +1,1 @@
-# django-dockerfordeploy
+# django-nginx-gunicorn-docker
