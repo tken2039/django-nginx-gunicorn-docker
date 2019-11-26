@@ -4,12 +4,6 @@ Django+nginx+gunicornでのデプロイを一瞬で実行するdocker-composeで
 
 (Use docker-compose to easily deploy with Django + nginx + gunicorn.)
 
-ポートのリンク設定は下図を参照してください。
-
-(The port link settings are as shown in the figure.)
-
-
-
 ## How to use
 
 ### ・Clone repository
@@ -72,9 +66,9 @@ $ docker-compose up
 
 ### ・Attention
 - Djangoプロジェクト内のsettings.pyで、localhostを許可しておきましょう。（ALLOWED_HOSTSのところ）
- - Edit "ALLOWED_HOSTS" in settings.py to allow 'localhost'.
+(Edit "ALLOWED_HOSTS" in settings.py to allow 'localhost'.)
 - ファイアウォールの設定で80番ポートへのアクセスを許可しておきましょう。
- - Edit the firewall to allow access to port 80.
+(Edit the firewall to allow access to port 80.)
 
 
 
